@@ -1,0 +1,30 @@
+header {
+  background-color: black;
+  color: white;
+}
+
+.toplogo {
+  float: left;
+  padding: 10px;
+  width: 353px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+  font-size: 14px;
+}
+
+li {
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+span {
+  color: #24baa0;
+  font-weight: 900;
+}

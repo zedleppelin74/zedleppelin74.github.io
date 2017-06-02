@@ -1,0 +1,22 @@
+{
+  "name": "fuck",
+  "version": "1.0.0",
+  "description": "fuck",
+  "main": "fuck",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "fuck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fuck"
+  },
+  "keywords": [
+    "fuck"
+  ],
+  "author": "fuck",
+  "license": "UNLICENSED"
+}

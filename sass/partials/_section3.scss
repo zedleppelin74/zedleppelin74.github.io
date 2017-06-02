@@ -1,0 +1,107 @@
+.section3 {
+  background-color: lightgrey;
+}
+
+
+.underline-section3 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+}
+
+.cennik h3 {
+  padding: 5px;
+  font-size: 20px;
+}
+
+.cennik {
+  margin: 50px 0px 0px 50px;
+}
+.planybox {
+  padding: 5px;
+}
+.basic, .standard, .advanced {
+  height: 500px;
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.14);
+  float: left;
+  padding: 5px;
+  background-color: white;
+}
+
+.kolko {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(0, 0, 0, 0.14);
+  border-radius: 50%;
+  position: relative;
+  top: -45px;
+  margin: 0 auto;
+  background-color: white;
+  z-index: 100;
+}
+
+.ckolko {
+  height: 50%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.14);
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  margin: 0 auto;
+}
+
+h4 {
+  text-align: center;
+  color: #27c7ab;
+  font-size: 1.5rem;
+}
+
+.cena {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.14);
+  margin: 20px auto;
+}
+.button-section3-box{
+  position: relative;
+  top: 130px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-section3 {
+  width: 100px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #24baa0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section3 a {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.plany {
+  margin-top: 100px;
+}
+@media (min-width: 500px) {
+  .plany > * {
+    padding: 5px
+  }
+}
+.section3 .row {
+  width: 100%;
+  .plany > * {
+    padding: 10px 1px;
+    height: 500px;
+    float: left;
+  }
+}
