@@ -10,24 +10,36 @@
   width: 250px;
 }
 
-.cennik h3 {
-  padding: 5px;
-  font-size: 20px;
-}
 
 .cennik {
   margin: 50px 0px 0px 50px;
+  & h3 {
+    padding: 5px;
+    font-size: 20px;
+  }
 }
+
+.plany > * {
+  margin: 25px 0px;
+  padding: 10px 1px;
+  float: left;
+}
+
 .planybox {
-  padding: 5px;
+  margin: 25px;
 }
+
+.advanced-box {
+  margin: 0 auto;
+}
+
 .basic, .standard, .advanced {
   height: 500px;
   width: 100%;
   border: 2px solid rgba(0, 0, 0, 0.14);
   float: left;
-  padding: 5px;
   background-color: white;
+  margin-top: 15px;
 }
 
 .kolko {
@@ -42,7 +54,7 @@
   z-index: 100;
 }
 
-.ckolko {
+.malekolko {
   height: 50%;
   width: 50%;
   background-color: rgba(0, 0, 0, 0.14);
@@ -58,16 +70,54 @@ h4 {
   font-size: 1.5rem;
 }
 
-.cena {
+.cenakolko {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.14);
   margin: 20px auto;
 }
-.button-section3-box{
+
+.cena {
   position: relative;
-  top: 130px;
+  top: 25px;
+  left: 25px;
+  color: grey;
+  & > p:nth-child(1) {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    position: relative;
+    left: 10px;
+  }
+  & > p:nth-child(2) {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    position: relative;
+    bottom: 50px;
+    left: 60px;
+  }
+  & > p:nth-child(3) {
+    position: relative;
+    bottom: 10px;
+  }
+}
+
+.uslugi-box {
+  width: 100%;
+  color: grey;
+  font-size: 1.2rem;
+  padding: 10px 0px;
+  & > * {
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  & *:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+}
+
+.button-section3-box{
   display: flex;
   justify-content: center;
 }
@@ -89,19 +139,34 @@ h4 {
   text-decoration: none;
 }
 
-.plany {
-  margin-top: 100px;
-}
 @media (min-width: 500px) {
   .plany > * {
-    padding: 5px
+    padding: 5px;
   }
 }
-.section3 .row {
-  width: 100%;
-  .plany > * {
-    padding: 10px 1px;
-    height: 500px;
-    float: left;
+
+.activeplan {
+  background-color: #24baa0;
+  border-color: #24baa0;
+  h4 {
+    color: white;
+  }
+  .malekolko {
+    background-color: white;
+  }
+  .cena {
+    color: #24baa0;
+  }
+  .cenakolko {
+    background-color: white;
+  }
+  .button-section3 {
+    background-color: white;
+    & a {
+      color: #24baa0;
+    }
+  }
+  .kolko {
+    background-color: #24baa0;
   }
 }

@@ -344,6 +344,12 @@ input[type=button] {width: auto; overflow: visible;}
   overflow: hidden;
 }
 
+[class*="col-"] {
+  overflow: hidden;
+  float: left;
+  min-height: 1px;
+}
+
 .underline {
   width: 138px;
   height: 7px;

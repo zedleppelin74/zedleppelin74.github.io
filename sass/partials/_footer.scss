@@ -1,0 +1,25 @@
+footer {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+.footer-copy {
+  float: left;
+  margin: 10px 40px;
+}
+
+.footer-logo {
+  float: right;
+  margin: 10px 40px;
+  & b {
+    font-weight: 900;
+  }
+}
+
+.footer-imgs {
+  float: right;
+  margin: 0px 40px;
+  & > * {
+    cursor: pointer;
+  }
+}

@@ -12,6 +12,21 @@
   margin: 100px 0px 0px 50px;
 }
 
+.slider {
+  position: relative;
+  & li {
+    position: absolute;
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
 #blackchair, .texttop {
   width: 40%;
   float: left;
@@ -60,13 +75,11 @@ h1 {
   margin-left: -70px;
 }
 
-.fa-angle-left {
+.fa-angle-left, .fa-angle-right {
   float: left;
 }
 
-.fa-angle-right {
-  float: right;
-}
+
 
 .fa {
   width: 10%;
