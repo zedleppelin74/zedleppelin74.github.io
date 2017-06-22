@@ -26,40 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
     images.eq(currentPic).removeClass("invisible");
   });
 
-//   var nextPicture = document.getElementById("nextPicture");
-//   var prevPicture = document.getElementById("prevPicture");
-//   var lis = document.querySelectorAll(".slider li");
-//   console.log(lis);
-//   var current = 0;
-//
-//   prevPicture.addEventListener("click", function() {
-//     console.log('click nextPicture');
-//     lis[current].classList.remove('visible');
-//     current = current - 1;
-//     if (current <= 0) {
-//       current = 0;
-//       lis[current].classList.add('visible');
-//     } else {
-//       lis[current].classList.add("visible");
-//     }
-//   });
-//
-//   lis[current].classList.add("visible");
-//
-//   nextPicture.addEventListener("click", function() {
-//     console.log("click prev");
-//     lis[current].classList.remove("visible");
-//
-//     current += 1;
-//     if (current >= lis.length) {
-//       current = lis.length - 1;
-//       lis[current].classList.add('visible');
-//     } else {
-//       lis[current].classList.add('visible')
-//     }
-//   });
-//
-// });
 
 /////////////////////SECTION 2
 var margbox = document.querySelector(".margbox");
