@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   /////////////////////HEADER
   /////////////////////SECTION 1
-  //SLIDER (nie działa)
+  //SLIDER (teraz już działa)
   var left = $(".slide-left");
   var right = $(".slide-right");
   var images = $(".slider > *");
