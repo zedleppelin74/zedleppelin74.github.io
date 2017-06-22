@@ -6,102 +6,122 @@ document.addEventListener("DOMContentLoaded", function() {
   var right = $(".slide-right");
   var images = $(".slider > *");
   console.log(images);
-
+  var currentPic = 0;
 
   images.each(function() {
-    $(this).hide();
+    $(this).addClass("invisible");
   });
-
-  images.first().show();
+  console.log(images.eq(currentPic));
+  images.eq(currentPic).removeClass("invisible");
 
   left.click(function() {
-    images.each(function() {
-      console.log(this);
-      if (this.style.display == "block") {
-        this.fadeOut().prev().fadeIn();
-      }
-    })
+    images.eq(currentPic).addClass("invisible");
+    currentPic--;
+    images.eq(currentPic).removeClass("invisible");
   });
 
   right.click(function() {
-    images.each(function() {
-      console.log(this);
-      if (this.style.display == "block") {
-        this.fadeOut().next().fadeIn();
-      }
-    })
+    images.eq(currentPic).addClass("invisible");
+    currentPic++;
+    images.eq(currentPic).removeClass("invisible");
   });
-  
 
+//   var nextPicture = document.getElementById("nextPicture");
+//   var prevPicture = document.getElementById("prevPicture");
+//   var lis = document.querySelectorAll(".slider li");
+//   console.log(lis);
+//   var current = 0;
+//
+//   prevPicture.addEventListener("click", function() {
+//     console.log('click nextPicture');
+//     lis[current].classList.remove('visible');
+//     current = current - 1;
+//     if (current <= 0) {
+//       current = 0;
+//       lis[current].classList.add('visible');
+//     } else {
+//       lis[current].classList.add("visible");
+//     }
+//   });
+//
+//   lis[current].classList.add("visible");
+//
+//   nextPicture.addEventListener("click", function() {
+//     console.log("click prev");
+//     lis[current].classList.remove("visible");
+//
+//     current += 1;
+//     if (current >= lis.length) {
+//       current = lis.length - 1;
+//       lis[current].classList.add('visible');
+//     } else {
+//       lis[current].classList.add('visible')
+//     }
+//   });
+//
+// });
 
-  /////////////////////SECTION 2
-  var margbox = document.querySelector(".margbox");
-  var clairbox = document.querySelector(".clairbox");
-  var boxessec2 = [margbox, clairbox];
+/////////////////////SECTION 2
+var margbox = document.querySelector(".margbox");
+var clairbox = document.querySelector(".clairbox");
+var boxessec2 = [margbox, clairbox];
 
-  boxessec2.forEach(function(e) {
-    e.parentNode.addEventListener("mouseenter", function() {
-      e.style.display = "none";
-    })
-    e.parentNode.addEventListener("mouseleave", function() {
-      e.style.display = "block";
-    })
+boxessec2.forEach(function(e) {
+  e.parentNode.addEventListener("mouseenter", function() {
+    e.style.display = "none";
   })
-
-
-  /////////////////////SECTION 3
-  var plany = document.querySelectorAll(".planybox > *");
-  //console.log(plany);
-  plany.forEach(function(e) {
-    e.addEventListener("click", function() {
-      if (e.classList.contains("activeplan")) {
-        e.classList.remove("activeplan")
-      } else {
-        e.className += " activeplan"
-      }
-    })
+  e.parentNode.addEventListener("mouseleave", function() {
+    e.style.display = "block";
   })
+})
 
-
-
-
-  /////////////////////SECTION 4
-  //TICK NA ZGADZAM SIĘ
-  var agreebtn = document.querySelector(".agreebtn");
-  var agreeinput = document.getElementsByName("tick");
-
-  agreebtn.addEventListener("click", function() {
-    if (this.style.backgroundImage == "") {
-      this.style.backgroundImage = "url(\"./images/form_ok.jpg\")";
-      agreeinput.forEach(function(e) {
-        e.setAttribute("checked", "checked");
-      })
+/////////////////////SECTION 3
+var plany = document.querySelectorAll(".planybox > *");
+//console.log(plany);
+plany.forEach(function(e) {
+  e.addEventListener("click", function() {
+    if (e.classList.contains("activeplan")) {
+      e.classList.remove("activeplan")
     } else {
-      this.style.backgroundImage = "";
-      agreeinput.forEach(function(e) {
-        e.removeAttribute("checked");
-      })
+      e.className += " activeplan"
     }
   })
+})
 
-  //SUBMIT NA BUTTONIE
-  var sendbtn = document.querySelector(".sendbtn");
-  var sendinput = document.getElementsByName("submit");
+/////////////////////SECTION 4
+//TICK NA ZGADZAM SIĘ
+var agreebtn = document.querySelector(".agreebtn");
+var agreeinput = document.getElementsByName("tick");
 
+agreebtn.addEventListener("click", function() {
+  if (this.style.backgroundImage == "") {
+    this.style.backgroundImage = "url(\"./images/form_ok.jpg\")";
+    agreeinput.forEach(function(e) {
+      e.setAttribute("checked", "checked");
+    })
+  } else {
+    this.style.backgroundImage = "";
+    agreeinput.forEach(function(e) {
+      e.removeAttribute("checked");
+    })
+  }
+})
+
+//SUBMIT NA BUTTONIE
+var sendbtn = document.querySelector(".sendbtn");
+var sendinput = document.getElementsByName("submit");
+
+sendinput.forEach(function(e) {
+  e.addEventListener("click", function(e) {
+    e.preventDefault();
+  })
+})
+
+sendbtn.addEventListener("click", function() {
   sendinput.forEach(function(e) {
-    e.addEventListener("click", function(e) {
-      e.preventDefault();
-    })
+    e.click();
   })
+})
 
-  sendbtn.addEventListener("click", function() {
-    sendinput.forEach(function(e) {
-      e.click();
-    })
-  })
-
-
-
-
-  /////////////////////FOOTER
+/////////////////////FOOTER
 })
